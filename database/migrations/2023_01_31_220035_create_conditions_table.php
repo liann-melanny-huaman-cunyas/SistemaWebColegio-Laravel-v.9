@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Conditions;
+use App\Models\Condition;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -16,10 +16,10 @@ return new class extends Migration
     {
         Schema::create('conditions', function (Blueprint $table) {
             $table->id();
-            $table->enum('academic_condition',[  Conditions::aprobado,
-                                                Conditions::desaprobado,
-                                                Conditions::recuperacion  ])
-                                                ->default(Conditions::aprobado);
+            $table->enum('academic_condition',[  Condition::aprobado,
+                                                Condition::desaprobado,
+                                                Condition::recuperacion  ])
+                                                ->default(Condition::aprobado);
             $table->timestamps();
         });
     }

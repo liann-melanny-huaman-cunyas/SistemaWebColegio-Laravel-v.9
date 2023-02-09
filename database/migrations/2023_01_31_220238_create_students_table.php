@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Students;
+use App\Models\Student;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('student_address')->unique();
             $table->date('date_of_birth');
             $table->integer('student_age');
-            $table->enum('gender',[Students::femenino, Students::masculino]);
+            $table->enum('gender',[Student::femenino, Student::masculino]);
             $table->timestamps();
         });
     }

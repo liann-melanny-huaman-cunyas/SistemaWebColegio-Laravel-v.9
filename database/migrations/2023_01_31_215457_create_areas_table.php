@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('academic_area')->unique();
             $table->timestamps();
+
         });
     }
 

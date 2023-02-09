@@ -18,11 +18,8 @@ return new class extends Migration
             $table->string('teacher_name');
             $table->string('teacher_surnames');
             $table->string('teacher_type');
-
             $table->unsignedBigInteger('area_id');
-
             $table->foreign('area_id')->references('id')->on('areas')->onDelete('cascade');
-
             $table->timestamps();
         });
     }

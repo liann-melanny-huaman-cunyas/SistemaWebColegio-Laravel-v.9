@@ -5,10 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Students extends Model
+class Period extends Model
 {
     use HasFactory;
+/*
+    public function role(){
+        return $this ->belongsToMany(Role::class);
+    }
 
-    const femenino=1;
-    const masculino=2;
+    */
 }

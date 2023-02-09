@@ -5,11 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Sections extends Model
+class Course extends Model
 {
     use HasFactory;
-
-    const primeraseccion = 'A';
-    const segundaseccion = 'B';
-    const terceraseccion = 'C';
+/*
+    public function teacher(){
+        return $this ->belongsToMany(Teacher::class);
+    }
+    */
 }

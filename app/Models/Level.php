@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Levels extends Model
+class Level extends Model
 {
     use HasFactory;
 
-    const primaria='primaria';
-    const secundaria='secundaria';
+    const primaria=1;
+    const secundaria=2;
 }

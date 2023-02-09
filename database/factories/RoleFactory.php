@@ -3,11 +3,13 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\ROle;
+
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Levels>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Roles>
  */
-class LevelsFactory extends Factory
+class RoleFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +19,7 @@ class LevelsFactory extends Factory
     public function definition()
     {
         return [
-            'academic_level'=>$this->faker->randomElement(['primaria','secundaria']),
+            'rol_name' => $this -> faker -> name(),
         ];
     }
 }

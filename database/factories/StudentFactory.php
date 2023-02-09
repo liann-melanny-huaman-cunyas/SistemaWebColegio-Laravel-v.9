@@ -2,13 +2,13 @@
 
 namespace Database\Factories;
 
-use App\Models\Students;
+use App\Models\Student;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Students>
  */
-class StudentsFactory extends Factory
+class StudentFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -25,8 +25,8 @@ class StudentsFactory extends Factory
             'student_address'=>$this->faker->safeEmail(),
             'date_of_birth'=>$this ->faker->date(),
             'student_age'=>$this->faker->numberBetween(18,90),
-            'gender'=>$this ->faker->randomElement([Students::femenino,Students::masculino]),
-            
+            'gender'=>$this ->faker->randomElement([Student::femenino,Student::masculino]),
+
         ];
     }
 }

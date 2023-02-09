@@ -3,11 +3,13 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Condition;
+
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Conditions>
  */
-class SectionsFactory extends Factory
+class ConditionFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +19,7 @@ class SectionsFactory extends Factory
     public function definition()
     {
         return [
-            'academic_section' =>$this -> faker -> randomElement(['a','b','c']),
+            'academic_condition' => $this -> faker -> randomElement(['aprobado','desaprobado','recuperacion']),
         ];
     }
 }

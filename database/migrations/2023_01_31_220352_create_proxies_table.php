@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Proxies;
+use App\Models\Proxie;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -22,8 +22,8 @@ return new class extends Migration
             $table->integer('proxy_cell');
             $table->string('proxy_address');
             $table->integer('proxy_age');
-            $table->enum('gender',[ Proxies::masculino,
-                                    Proxies::femenino]);
+            $table->enum('gender',[ Proxie::masculino,
+                                    Proxie::femenino]);
             $table->string('proxy_relation');
             $table->timestamps();
         });

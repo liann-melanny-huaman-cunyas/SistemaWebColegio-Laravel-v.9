@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Section;
 use App\Models\Sections;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -16,10 +17,10 @@ return new class extends Migration
     {
         Schema::create('sections', function (Blueprint $table) {
             $table->id();
-            $table->enum('academic_section',[Sections::primeraseccion,
-                                            Sections::segundaseccion,
-                                            Sections::terceraseccion])
-                                            ->default(Sections::primeraseccion);
+            $table->enum('academic_section',[Section::primeraseccion,
+                                            Section::segundaseccion,
+                                            Section::terceraseccion])
+                                            ->default(Section::primeraseccion);
             $table->timestamps();
         });
     }

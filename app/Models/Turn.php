@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Turns extends Model
+class Turn extends Model
 {
     use HasFactory;
 
-    const mañana ='mañana';
-    const tarde  ='tarde';
+    const mañana = 'mañana';
+    const tarde='tarde';
+
 }

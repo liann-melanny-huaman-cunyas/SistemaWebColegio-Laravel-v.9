@@ -13,15 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('competences', function (Blueprint $table) {
+        Schema::create('competence_periods', function (Blueprint $table) {
             $table->id();
-            $table->string('academic_competence');
-
-            //declarar 
-            $table->unsignedBigInteger('area_id');
-
-            $table->foreign('area_id')->references('id')->on('areas')->onDelete('cascade');
-
+            $table->unsignedBigInteger('competence_id');
+            $table->unsignedBigInteger('period_id');
+            $table->foreign('competence_id')->references('id')->on('competences')->onDelete('cascade');
+            $table->foreign('period_id')->references('id')->on('periods')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -33,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('competences');
+        Schema::dropIfExists('competence_periods');
     }
 };

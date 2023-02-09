@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Degree;
 use App\Models\Degrees;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -16,10 +17,10 @@ return new class extends Migration
     {
         Schema::create('degrees', function (Blueprint $table) {
             $table->id();
-            $table->enum('academic_degree',[ Degrees::primergrado,Degrees::segundogrado,
-                                            Degrees::tercergrado,Degrees::cuartogrado,
-                                            Degrees::quintogrado,Degrees::sextogrado])
-                                            ->default(Degrees::primergrado);
+            $table->enum('academic_degree',[ Degree::primergrado,Degree::segundogrado,
+                                            Degree::tercergrado,Degree::cuartogrado,
+                                            Degree::quintogrado,Degree::sextogrado])
+                                            ->default(Degree::primergrado);
             $table->timestamps();
         });
     }

@@ -3,11 +3,13 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Area;
+
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Courses>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Areas>
  */
-class CoursesFactory extends Factory
+class AreaFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +19,7 @@ class CoursesFactory extends Factory
     public function definition()
     {
         return [
-            'course_name' => $this->faker->name(),
+            'academic_area'=>$this->faker->name(),
         ];
     }
 }

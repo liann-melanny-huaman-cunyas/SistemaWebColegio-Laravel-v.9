@@ -3,11 +3,12 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Course;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Turns>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Courses>
  */
-class TurnsFactory extends Factory
+class CourseFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -16,8 +17,8 @@ class TurnsFactory extends Factory
      */
     public function definition()
     {
-        return [ 
-            'academic_turn' => $this -> faker -> randomElement(['mañana','tarde']),
+        return [
+            'course_name' => $this->faker->name(),
         ];
     }
 }

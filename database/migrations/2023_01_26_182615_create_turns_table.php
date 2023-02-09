@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\Models\Turns;
+use App\Models\Turn;
 
 
 return new class extends Migration
@@ -17,9 +17,9 @@ return new class extends Migration
     {
         Schema::create('turns', function (Blueprint $table) {
             $table->id();
-            $table->enum('academic_turn',[   Turns::mañana,
-                                            Turns::tarde])
-                                            ->default(Turns::mañana);
+            $table->enum('academic_turn',[   Turn::mañana,
+                                            Turn::tarde])
+                                            ->default(Turn::mañana);
             $table->timestamps();
 
         });

@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Proxies extends Model
+class Condition extends Model
 {
     use HasFactory;
 
-    const femenino=1;
-    const masculino=2;
+    const  aprobado ='aprobado';
+    const  desaprobado ='desaprobado';
+    const  recuperacion='recuperacion';
 }

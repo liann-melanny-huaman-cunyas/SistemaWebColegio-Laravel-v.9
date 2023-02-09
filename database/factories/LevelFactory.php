@@ -3,11 +3,13 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Level;
+
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Conditions>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Levels>
  */
-class ConditionsFactory extends Factory
+class LevelFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +19,7 @@ class ConditionsFactory extends Factory
     public function definition()
     {
         return [
-            'academic_condition' => $this -> faker -> randomElement(['aprobado','desaprobado','recuperacion']),
+            'academic_level'=>$this->faker->randomElement(['1','2']),
         ];
     }
 }

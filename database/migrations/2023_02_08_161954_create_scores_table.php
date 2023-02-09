@@ -16,16 +16,13 @@ return new class extends Migration
         Schema::create('scores', function (Blueprint $table) {
             $table->id();
             $table->integer('score');
-
-            $table->unsignedBigInteger('c_p_id');
-            $table->unsignedBigInteger('t_c_id');
-            $table->unsignedBigInteger('student_id');
-
-            $table->foreign('c_p_id')->references('id')->on('competence_period')->onDelete('cascade');
-            $table->foreign('t_c_id')->references('id')->on('teacher_course')->onDelete('cascade');
-            $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
-
-            $table->timestamps();
+            $table->unsignedBigInteger('cp');
+            $table->unsignedBigInteger('tc');
+            $table->unsignedBigInteger('student');
+            $table->foreign('cp')->references('id')->on('competence_periods')->onDelete('cascade');
+            $table->foreign('tc')->references('id')->on('teacher_courses')->onDelete('cascade');
+            $table->foreign('student')->references('id')->on('students')->onDelete('cascade');
+            $table->timestamps();  
         });
     }
 

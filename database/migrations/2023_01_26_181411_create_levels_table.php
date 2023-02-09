@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Levels;
+use App\Models\Level;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -18,9 +18,9 @@ return new class extends Migration
     {
         Schema::create('levels', function (Blueprint $table) {
             $table->id();
-            $table->enum("academic_level",[  Levels::primaria,
-                                             Levels::secundaria])
-                                        -> default(Levels::primaria);
+            $table->enum("academic_level",[  Level::primaria,
+                                            Level::secundaria])
+                                        -> default(Level::primaria);
             $table->timestamps();
         });
     }

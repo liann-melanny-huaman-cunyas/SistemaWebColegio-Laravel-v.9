@@ -3,11 +3,13 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Turn;
+
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Degrees>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Turns>
  */
-class DegreesFactory extends Factory
+class TurnFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +19,7 @@ class DegreesFactory extends Factory
     public function definition()
     {
         return [
-            'academic_degree' =>$this ->faker->randomElement(['1','2','3','4','5','6']),
+            'academic_turn' => $this -> faker -> randomElement(['mañana','tarde']),
         ];
     }
 }
