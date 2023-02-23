@@ -19,7 +19,7 @@ class TurnFactory extends Factory
     public function definition()
     {
         return [
-            'academic_turn' => $this -> faker -> randomElement(['mañana','tarde']),
+            'academic_turn' => fake() -> randomElement(['mañana','tarde']),
         ];
     }
 }

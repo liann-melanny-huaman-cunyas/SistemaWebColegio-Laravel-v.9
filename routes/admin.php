@@ -1,10 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HoneController;
+use App\Http\Controllers\HomeController;
 
-//Route::get('admin',[HoneController::class,'index']);
+Route::get('admin',[HomeController::class,'index']);
 
-Route::get('admin', function (){
-    return 'Cassie';
-});
